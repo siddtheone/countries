@@ -1,21 +1,22 @@
 import React from 'react';
 import Header from './components/Header';
-import useCountries from './hooks/useCountries';
 import { Container } from './components/Styled';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CountryContainer from './container/CountriesContainer';
+import CountryList from './components/CountriesList/CountryList';
 
 function App() {
-  const [isLoading, isError, countries] = useCountries();
-
   return (
     <Router>
       <div className="App">
         <Header />
         <Container>
-          <Switch>
-            <Route exact path="/" />
-            <Route exact path="country/:alpha3Code" />
-          </Switch>
+          <CountryContainer>
+            <Switch>
+              <Route exact path="/" component={CountryList}/>
+              <Route exact path="/:alpha3Code" />
+            </Switch>
+          </CountryContainer>
         </Container>
       </div>
     </Router>

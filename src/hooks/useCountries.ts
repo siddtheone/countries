@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react';
 import { ENDPOINT } from '../constatns';
+import { Country } from '../models';
 
-export default function useCountries() {
+export default function useCountries(): [boolean, string, Country[]] {
   const [isLoading, setLoading] = useState(false);
   const [isError, setError] = useState('');
   const [countries, setCountries] = useState([]);

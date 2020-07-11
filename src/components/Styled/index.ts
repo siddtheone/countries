@@ -5,13 +5,17 @@ type GlobalProps = {
 }
 
 export const Global = createGlobalStyle<GlobalProps>`
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Nunito Sans', sans-serif;
   }
 
   :root {
     --input: hsl(0, 0%, 52%);
-    --appBG: ${({isLight}) => isLight ? 'hsl(0, 0%, 98%)' : 'hsl(0, 0%, 98%)'};
+    --appBG: ${({isLight}) => isLight ? 'hsl(0, 0%, 98%)' : 'hsl(207, 26%, 17%)'};
     --cardBG: ${({isLight}) => isLight ? 'hsl(0, 0%, 100%)' : 'hsl(209, 23%, 22%)'};
     --cardText: ${({isLight}) => isLight ? 'hsl(200, 15%, 8%)' : 'hsl(0, 0%, 100%)'};
   }
