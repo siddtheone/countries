@@ -32,7 +32,7 @@ function CountryList() {
         onFilter={setFilter}
       />
       {isLoading && !isError && <Info>Loading...</Info>}
-      {!isLoading && isError && <Info>isError</Info>}
+      {!isLoading && isError && <Info>{isError}</Info>}
       {!isLoading && filteredCountries.length === 0 && <div>No results</div>}
       <StyledCountryList>
         {filteredCountries.length > 0 && filteredCountries.map(c => <CountryCard key={c.alpha3Code} {...c}/>)}
