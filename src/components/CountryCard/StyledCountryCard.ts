@@ -1,12 +1,14 @@
 import styled from 'styled-components';
-import { themeColorsMixing } from '../Styled';
+import {
+  themeColorsMixing,
+  shadowMixing } from '../Styled';
 
 export const StyledCountryCard = styled.section`
   ${themeColorsMixing}
+  ${shadowMixing}
   border-radius: 5px;
   display: grid;
   grid-template-rows: 150px auto;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, .5);
 `;
 
 export const StyledImg = styled.img`

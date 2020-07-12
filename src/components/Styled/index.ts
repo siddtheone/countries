@@ -32,6 +32,10 @@ export const themeColorsMixing = css`
   transition: 0.5s;
 `;
 
+export const shadowMixing = css`
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, .5);
+`;
+
 export const Container = styled.main`
   background: var(--appBG);
   padding: 1em 0;
