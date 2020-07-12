@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import {themeColorsMixing, maxCenterMixing} from '../Styled';
 
 const Header = styled.header`
@@ -12,8 +13,11 @@ export const HeaderContainer = styled.div`
   align-items: center;
 `;
 
-export const AppTitle = styled.h1`
+export const AppTitle = styled(Link)`
+  ${themeColorsMixing};
   font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
   @media (min-width: 600px) {
     font-size: 2rem;
   }

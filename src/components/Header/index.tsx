@@ -13,7 +13,7 @@ export default function Header() {
     <StyledHeader>
       <Global isLight={isLight} />
       <HeaderContainer>
-        <AppTitle>Where in the world</AppTitle>
+        <AppTitle to="/" >Where in the world</AppTitle>
         <ThemeButton onClick={toggleTheme}>
           <span className="fa fa-moon-o" />
           {isLight ? 'Dark' : 'Light'} Mode

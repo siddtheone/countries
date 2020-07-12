@@ -5,7 +5,9 @@ import {
   shadowMixing
 } from '../Styled';
 
-export const StyledFilters = styled.div``;
+export const StyledFilters = styled.div`
+  margin: 1em 0;
+`;
 
 export const StyledFiltersMaxCenter = styled.div`
   ${maxCenterMixing};
@@ -37,11 +39,12 @@ export const StyledInput = styled.input`
 export const StyledSelect = styled.select`
   ${shadowMixing}
   ${themeColorsMixing}
-  padding: .5em;
+  padding: .5em 1em;
   border-radius: 5px;
   margin-top: 1em;
   border: none;
   outline: none;
+  font-size: 1.1rem;
 
   @media (min-width: 600px) {
     margin-top: 0;
