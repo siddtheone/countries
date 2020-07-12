@@ -12,4 +12,4 @@ export const fields = [
   'alpha3Code',
   'flag'
 ];
-export const ENDPOINT = `http://restcountries.eu/rest/v2/all?${fields.join(';')}`;
+export const ENDPOINT = `https://restcountries.eu/rest/v2/all?${fields.join(';')}`;
